@@ -20,7 +20,7 @@ public class ServletRememberMeAuthenticationProvider extends RememberMeAuthentic
 	}
 
 	@Override
-	public void afterPropertiesSet() throws Exception {
+	public void afterPropertiesSet() {
 		super.afterPropertiesSet();
 		Assert.notNull(authenticator, "Authenticator delegate required");
 	}
