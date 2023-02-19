@@ -6,6 +6,6 @@ import org.springframework.security.core.authority.GrantedAuthoritiesContainer;
 
 public interface GrantedAuthoritiesManager {
 
-	public GrantedAuthoritiesContainer getGrantedAuthorities(HttpServletRequest request);
+	GrantedAuthoritiesContainer getGrantedAuthorities(HttpServletRequest request);
 
 }

@@ -7,10 +7,10 @@ public interface AuthenticationTokenService<T> {
 	 *            data to be processed by a specific implementation
 	 * @return a new token
 	 */
-	public String allocate(String data);
+	String allocate(String data);
 
-	public T validate(String key);
+	T validate(String key);
 
-	public void erase(String key);
+	void erase(String key);
 
 }

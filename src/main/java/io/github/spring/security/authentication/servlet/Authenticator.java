@@ -7,6 +7,6 @@ import org.springframework.security.core.Authentication;
 
 public interface Authenticator {
 
-	public Authentication authenticate(Authentication authentication, HttpServletRequest request, HttpServletResponse response);
+	Authentication authenticate(Authentication authentication, HttpServletRequest request, HttpServletResponse response);
 
 }

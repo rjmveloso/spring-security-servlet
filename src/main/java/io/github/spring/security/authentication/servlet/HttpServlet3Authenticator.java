@@ -16,7 +16,7 @@ import io.github.spring.security.authentication.GrantedAuthoritiesManager;
 
 /**
  * This class supports authentication based on the new Servlet 3.0
- * {@link #javax.servlet.http.HttpServletRequest} <code>login</code> method.
+ * {@link javax.servlet.http.HttpServletRequest} <code>login</code> method.
  * 
  * @author ricardo.veloso
  *

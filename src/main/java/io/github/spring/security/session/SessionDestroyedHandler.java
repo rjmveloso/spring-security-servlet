@@ -6,6 +6,6 @@ import org.springframework.security.core.Authentication;
 
 public interface SessionDestroyedHandler {
 
-	public void handle(HttpSession session, Authentication authentication);
+	void handle(HttpSession session, Authentication authentication);
 	
 }

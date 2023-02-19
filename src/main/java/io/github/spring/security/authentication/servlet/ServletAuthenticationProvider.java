@@ -14,7 +14,7 @@ public class ServletAuthenticationProvider implements AuthenticationProvider, In
 	private Authenticator authenticator;
 
 	@Override
-	public void afterPropertiesSet() throws Exception {
+	public void afterPropertiesSet() {
 		Assert.notNull(authenticator, "Authenticator delegate required");
 	}
 

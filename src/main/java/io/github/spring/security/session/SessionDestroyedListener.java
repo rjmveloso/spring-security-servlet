@@ -12,15 +12,11 @@ import org.springframework.security.core.session.SessionDestroyedEvent;
 
 public class SessionDestroyedListener implements ApplicationListener<SessionDestroyedEvent> {
 
-	private SessionDestroyedHandler sthandler = new SessionDestroyedHandler() {
-		@Override
-		public void handle(HttpSession session, Authentication authentication) {
-		}
-	};
+	private SessionDestroyedHandler handler = (session, authentication) -> {};
 
 	public void setSessionTimeoutHandler(SessionDestroyedHandler handler) {
 		Objects.requireNonNull(handler);
-		this.sthandler = handler;
+		this.handler = handler;
 	}
 
 	@Override
@@ -38,7 +34,7 @@ public class SessionDestroyedListener implements ApplicationListener<SessionDest
 		try {
 			SecurityContextHolder.setContext(context);
 
-			sthandler.handle(session, authentication);
+			handler.handle(session, authentication);
 		} finally {
 			SecurityContextHolder.clearContext();
 		}

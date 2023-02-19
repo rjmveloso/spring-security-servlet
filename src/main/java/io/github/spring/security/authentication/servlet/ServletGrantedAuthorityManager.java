@@ -20,6 +20,7 @@ import io.github.spring.security.authentication.GrantedAuthoritiesManager;
 public class ServletGrantedAuthorityManager implements InitializingBean, GrantedAuthoritiesManager {
 
 	private MappableAttributesRetriever mappedAttributesRetriever = new WebXmlMappableAttributesRetriever();
+
 	private Attributes2GrantedAuthoritiesMapper attributesAuthoritiesMapper = new SimpleAttributes2GrantedAuthoritiesMapper();
 
 	@Override
